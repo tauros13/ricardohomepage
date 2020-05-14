@@ -1,11 +1,39 @@
+/* soft reset do css( só reseta o margin, padding, e ajusta o box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 body {
     background-image: url('https://www.lupadigital.info/wp-content/uploads/2018/05/imagens-gratis.jpg.webp');
-     background-size: auto 100vh;
-     font-family: Arial
-     height: 100vh;
-   } 
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+    font-size: 10px;
+    } 
+
+  /* se a tela tiver pelo menos 400px vai carregar estes estilos*/
+    @media (min-width: 400px ) {
+      body{
+        font-size: 14px;
+      }
+
+    }
+     
+   header {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+   }
+
    .menu {
      background-color: white;
+     position: fixed;
+     width: 100vw;
+     top: 0;
    }
    
    .menu ul {
@@ -15,6 +43,12 @@ body {
    
    .menu li {
      list-style: none; 
+   }
+
+   .menu a {
+     display: block;
+     padding: 10px 20px;
+     /*background-color: aqua;(para saber como fica o botao atraves da cor*/
    }
    
    a {
@@ -33,4 +67,9 @@ body {
    
    .site-subtitle {
     font-style: italic;
+   }
+
+   .img-portfolio {
+     height: 180px;
+     width: 240px;
    }
