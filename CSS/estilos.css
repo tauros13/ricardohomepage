@@ -48,6 +48,7 @@ body {
      position: fixed;
      width: 100vw;
      top: 0;
+     z-index: 1;
    }
    
    .menu ul {
@@ -64,7 +65,14 @@ body {
    .menu a {
      display: block;
      padding: 10px 20px;
+     transition: background-color 1.5s, color 1.5s;
      /*background-color: aqua;(para saber como fica o botao atraves da cor*/
+   }
+
+   .contato a:active,
+   .menu a:hover {
+     background-color: teal;
+     color: whitesmoke;
    }
    
    a {
@@ -75,6 +83,19 @@ body {
      text-decoration: underline;
    }
    
+   .titulo {
+     transform: scale(0.2) translateY(50vh);
+     opacity: 0;
+     animation: linear 2s animacaoTitulo forwards;
+   }
+   @keyframes animacaoTitulo {
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+
+   }
+
    .site-subtitle,
    .site-title {
      color: whitesmoke;
@@ -95,11 +116,13 @@ body {
     
    }
 
+   .contato,
    .portfolio {
      padding: 2em;
-     height: 100vh;
+     min-height: 100vh;
    }
 
+   .contato h2,
    .portfolio h2 {
     font-family: 'Sedgwick Ave', cursive;
     color: whitesmoke;
@@ -109,7 +132,7 @@ body {
 
    .portfolio .grid {
      display: grid;
-     gap: 1.8em; 
+     gap: 5em; 
    }
    @media( min-width: 560px) {
       .portfolio .grid {
@@ -119,7 +142,7 @@ body {
 
    @media( min-width: 880px) {
     .portfolio .grid {
-      grid-template-columns: repeat(2, 400px); 
+      grid-template-columns: repeat(2, 300px); 
       align-content: center;
       justify-content: center;
       height: calc(100vh - 48px );
@@ -133,11 +156,31 @@ body {
    }
 
    .img-portfolio {
-     height: 270px;
+     height: 240px;
      width: 360px;
      object-fit: fill;
      border-radius: 5%; 
-    
+     transition: transform 0.5 s; 
+   }
+
+   .img-portfolio:hover {
+     transform: scale(1.2) rotate(10deg);
+   }
+
+   .contato .icons {
+     text-align: center;
+   }
+
+   .contato a{
+     color: antiquewhite;
+     font-size: 7em;
+     transition: text-shadow 0.5s;
+   }
+
+   .contato a:active,
+   .contato a:hover {
+     text-decoration: none;
+     text-shadow:0px 0px 10px rgb(147, 219, 4);
    }
 
    
