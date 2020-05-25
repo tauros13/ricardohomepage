@@ -1,56 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--mete o site responsivo-->
-    <title>Ricardo Pereira</title>
-    <link rel="stylesheet" href="CSS\estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Handlee&family=Sedgwick+Ave&display=swap" 
-    rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2be5e4e9c1.js"
-     crossorigin="anonymous"></script>
-</head>
-<body>
+<html lang="pt-pt">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--mete o site responsivo-->
+      <title>Ricardo Pereira</title>
+      <link rel="stylesheet" href="CSS\estilos.css">
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Handlee&family=Sedgwick+Ave&display=swap" 
+      rel="stylesheet">
+      <script src="https://kit.fontawesome.com/2be5e4e9c1.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
     <header>
         <nav class="menu">
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
+          <ul class= "container">
+            <li><a href="#Sobre">Sobre</a></li>
             <li><a href="#Projectos">Projectos</a></li>
             <li><a href="#Contactos">Contactos</a></li>
           <ul>
         </nav>
         <div class="titulo">
             <h1 class="site-title">Ricardo Pereira</h1>
-            <h2 class="site-subtitle">tecnico especialista de</h2>
-            <h2 class="site-subtitle">redes e sitemas informaticos</h2>
+            <h2 class="site-subtitle">Técnico Especialista de Redes e Sitemas Informáticos</h2>
+            <h2 class="site-subtitle"></h2>
             <h2 class="site-subtitle">Service Desk no MDN</h2>
         </div>
     </header>
-    <section class= "portfolio" id="Projectos">
+    <section class="sobre container" id="Sobre">
+      <h2>Sobre</h2>
+
+      <figure class="avatar">
+          <img src="./img/foto1.jpg" alt="Ricado Pereira">
+      </figure>
+
+      <p>
+        Como escrito no subtitulo do site Ricardo pereira, 39 anos. Um curioso pela informática desde que o meu pai me ofereceu o primeiro
+        computador de mesa. já mais imaginei trabalhar na area de TI, trabalhei durante alguns anos no comércio, não senti mais realizado,
+        dei 180 graus á minha vida e fui tirar uma formação na area de IT. Atualmente desempenho funções de primeira linha,
+        no service desk do Ministério da Defesa Nacional na Secretaria Geral.
+      </p>
+      <p>A vida não pára e os estudos tambem não, sempre a aprender novas ferramentas, aprender o básico de CSS para realiazar
+        este site.
+      </p>
+    </section>
+        <section class= "portfolio container" id="Projectos">
           <h2>Projectos</h2>
 
           <div class="grid">
-              <figure>
-                <img class="img-portfolio" src="./img/helpdesk.jfif" alt="helpdesk">
-                <figcaption>HelpDesk</figcaption>
-              </figure>
-              <figure>
-                <img class="img-portfolio" src="./img/manutençaopc.jfif" alt=">Mobile">
-                <figcaption>Manutenção e instalção de Hardware e Software</figcaption>
-              </figure>
-              <figure>
-                <img class="img-portfolio" src="./img/ad.jpg" alt="ad">
-                <figcaption>AD</figcaption>
-              </figure>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/helpdesk.jfif" alt="helpdesk">
+                    </figure>
+                    <div class="card-back">
+                        <h3>primeira linha servicedesk</h3>
+                      </div>
+                  </div>
+              </div>
+
+            <div class="flip-card">
+              <div class="card">
+                <figure class="card-front">
+                  <img class="img-portfolio" src="./img/manutençaopc.jfif" alt=">Mobile">
+                </figure>
+                <div class="card-back">
+                  <h3>Manutenção de Pcs</h3>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="card">
+                <figure>
+                  <img class="img-portfolio" src="./img/ad.jpg" alt="ad">
+                </figure>
+                <div class="card-back">
+                  <h3>Actve Directory</h3>
+                </div>
+              </div>
+            </div>
+              
+
+            <div class="flip-card">
+              <div class="card">
               <figure>
                 <img class="img-portfolio" src="./img/python.jfif" alt="python">
-                <figcaption>Python beginner</figcaption>
               </figure>
-          
+                <div class="card-back">
+                  <h3>inciante Python 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="card">
+              <figure>
+                <img class="img-portfolio" src="./img/sccm.png" alt="sccm">
+              </figure>
+                <div class="card-back">
+                  <h3>SCCM</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="card">
+              <figure>
+                <img class="img-portfolio" src="./img/css_html.jfif" alt="css">
+              </figure>
+                <div class="card-back">
+                  <h3>CSS HTML</h3>
+                </div>
+              </div>
+            </div>
+
           </div>
           
         </section>  
-        <section class="contato" id="Contactos">
+        <section class="contato conatiner" id="Contactos">
           <h2>Contactos</h2>
         
             <div class="grid icons">
@@ -68,6 +137,13 @@
               </a>
               
             </div>
-        </section>   
-</body>
+            
+        </section>
+        <section class="develop">
+          <p>
+            Este site foi desenvolvido por minha vontade de aprender durante a
+            <a href="https://www.alura.com.br/imersao-css">Imersão CSS ALURA</a>
+          </p>   
+        </section>
+  </body>
 </html>
